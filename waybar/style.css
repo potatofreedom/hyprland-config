@@ -1,0 +1,121 @@
+/* ===== Общие стили ===== */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.85);
+    border-radius: 12px;
+    border: 1px solid rgba(180, 190, 254, 0.2);
+    color: #cdd6f4;
+}
+
+/* ===== Модули ===== */
+#workspaces button {
+    padding: 0 8px;
+    color: #6c7086;
+    background: transparent;
+    border-radius: 8px;
+    margin: 4px 2px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #cba6f7;
+    background: rgba(203, 166, 247, 0.15);
+}
+
+#workspaces button:hover {
+    color: #f5c2e7;
+    background: rgba(245, 194, 231, 0.1);
+}
+
+/* Правые модули */
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#backlight,
+#clock,
+#tray,
+#custom-media,
+#custom-power {
+    padding: 0 12px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    background: rgba(49, 50, 68, 0.6);
+    transition: all 0.3s ease;
+}
+
+#clock {
+    color: #f5c2e7;
+    font-weight: bold;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #fab387;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    animation: blink 1s linear infinite;
+}
+
+#network {
+    color: #89b4fa;
+}
+
+#bluetooth {
+    color: #74c7ec;
+}
+
+#pulseaudio {
+    color: #fab387;
+}
+
+#backlight {
+    color: #f9e2af;
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#custom-power {
+    color: #f38ba8;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+#custom-media {
+    color: #a6e3a1;
+}
+
+#window {
+    color: #9399b2;
+    font-style: italic;
+}
+
+@keyframes blink {
+    to {
+        color: #f38ba8;
+        background: rgba(243, 139, 168, 0.15);
+    }
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(30, 30, 46, 0.95);
+    border: 1px solid rgba(180, 190, 254, 0.3);
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #cdd6f4;
+}

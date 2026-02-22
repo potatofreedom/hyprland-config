@@ -1,0 +1,47 @@
+# Пастельная тема для Starship
+
+format = """
+[╭─](bold #89b4fa)$directory$git_branch$git_status$python$nodejs$rust$golang$java$cmd_duration
+[╰─](bold #89b4fa)$character"""
+
+[character]
+success_symbol = "[>](bold #a6e3a1)"
+error_symbol = "[>](bold #f38ba8)"
+
+[directory]
+style = "bold #cba6f7"
+format = "[ $path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold #f5c2e7"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "bold #fab387"
+format = "[$all_status$ahead_behind]($style)"
+
+[python]
+symbol = " "
+style = "bold #f9e2af"
+format = "via [$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+style = "bold #a6e3a1"
+format = "via [$symbol$version]($style) "
+
+[rust]
+symbol = " "
+style = "bold #fab387"
+format = "via [$symbol$version]($style) "
+
+[cmd_duration]
+style = "bold #6c7086"
+format = "took [$duration]($style) "
+min_time = 2_000
+
+[line_break]
+disabled = false
