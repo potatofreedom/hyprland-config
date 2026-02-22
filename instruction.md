@@ -209,8 +209,8 @@ cd /tmp && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && make
 # Intel
 sudo pacman -S mesa intel-media-driver vulkan-intel lib32-mesa lib32-vulkan-intel
 
-# NVIDIA
-sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime opencl-nvidia lib32-opencl-nvidia
+# NVIDIA (nvidia-open для ядер 6.11+, если не работает — попробуй nvidia)
+sudo pacman -S nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime opencl-nvidia lib32-opencl-nvidia
 
 # NVIDIA modprobe (или используй install.sh)
 sudo cp ~/hyprland-config/system/nvidia.conf /etc/modprobe.d/nvidia.conf

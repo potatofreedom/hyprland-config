@@ -28,22 +28,23 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "10",
-            "urgent": "",
-            "active": "",
-            "default": ""
+            "1": "󰎤",
+            "2": "󰎧",
+            "3": "󰎪",
+            "4": "󰎭",
+            "5": "󰎱",
+            "6": "󰎳",
+            "7": "󰎶",
+            "8": "󰎹",
+            "9": "󰎼",
+            "10": "󰽽",
+            "urgent": "󰀨",
+            "active": "󰮯",
+            "default": "󰊠"
         },
         "on-click": "activate",
-        "sort-by-number": true
+        "sort-by-number": true,
+        "all-outputs": true
     },
 
     "hyprland/window": {
@@ -53,8 +54,8 @@
     },
 
     "clock": {
-        "format": "  {:%H:%M}",
-        "format-alt": "  {:%A, %d %B %Y | %H:%M:%S}",
+        "format": "󰥔  {:%H:%M}",
+        "format-alt": "󰃭  {:%A, %d %B %Y | %H:%M:%S}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -78,24 +79,24 @@
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-icons": ["", "", "", "", ""],
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "󰚥  {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁾", "󰂀", "󰁹"],
         "tooltip-format": "{timeTo}\n{power}W"
     },
 
     "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "  {ifname}",
-        "format-disconnected": "  Off",
+        "format-wifi": "󰤨  {signalStrength}%",
+        "format-ethernet": "󰈀  {ifname}",
+        "format-disconnected": "󰤭  Off",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}/{cidr}",
         "on-click": "iwctl"
     },
 
     "bluetooth": {
-        "format": " {status}",
-        "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "format": "󰂯 {status}",
+        "format-connected": "󰂱 {device_alias}",
+        "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -105,10 +106,10 @@
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-bluetooth": "  {volume}%",
-        "format-muted": "  Muted",
+        "format-bluetooth": "󰂰  {volume}%",
+        "format-muted": "󰝟  Muted",
         "format-icons": {
-            "default": ["", "", ""]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol",
         "on-click-right": "pamixer -t",
@@ -117,7 +118,7 @@
 
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
@@ -132,15 +133,15 @@
         "return-type": "json",
         "max-length": 25,
         "format-icons": {
-            "spotify": "",
-            "default": ""
+            "spotify": "󰓇",
+            "default": "󰎈"
         },
         "escape": true,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F 2>/dev/null"
     },
 
     "custom/power": {
-        "format": "",
+        "format": "󰐥",
         "on-click": "wlogout",
         "tooltip": false
     }
