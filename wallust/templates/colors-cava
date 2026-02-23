@@ -3,7 +3,7 @@
 
 [general]
 framerate = 60
-bars = 30
+bars = 0
 bar_width = 3
 bar_spacing = 1
 
