@@ -1,0 +1,16 @@
+# ╔══════════════════════════════════════╗
+# ║   Wallust — цвета из обоев           ║
+# ║   Генерирует палитру для всех apps   ║
+# ╚══════════════════════════════════════╝
+
+backend = "resized"
+palette = "dark16"
+check_contrast = true
+saturation = 50
+
+[templates]
+hyprland = { src = "colors-hyprland.conf", dst = "~/.config/hypr/colors-wallust.conf" }
+kitty = { src = "colors-kitty.conf", dst = "~/.config/kitty/colors-wallust.conf" }
+dunst = { src = "colors-dunstrc", dst = "~/.config/dunst/dunstrc" }
+wofi = { src = "colors-wofi.css", dst = "~/.config/wofi/style.css" }
+cava = { src = "colors-cava", dst = "~/.config/cava/config" }

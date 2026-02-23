@@ -1,0 +1,17 @@
+/* Default Catppuccin Mocha colors — will be overwritten by wallust */
+
+@define-color wallust_bg #1e1e2e;
+@define-color wallust_fg #cdd6f4;
+@define-color wallust_surface #313244;
+@define-color wallust_overlay #6c7086;
+@define-color wallust_accent #cba6f7;
+@define-color wallust_accent2 #89b4fa;
+@define-color wallust_red #f38ba8;
+@define-color wallust_green #a6e3a1;
+@define-color wallust_yellow #f9e2af;
+@define-color wallust_blue #89b4fa;
+@define-color wallust_magenta #cba6f7;
+@define-color wallust_cyan #94e2d5;
+@define-color wallust_orange #fab387;
+@define-color wallust_pink #f5c2e7;
+@define-color wallust_sapphire #74c7ec;
