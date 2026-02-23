@@ -385,6 +385,8 @@ cat /tmp/hypr/$(ls -t /tmp/hypr/ | head -1)/hyprland.log | tail -50
 
 ---
 
+yay -S wallust catppuccin-gtk-theme-mocha kvantum-theme-catppuccin-git
+
 ## План кастомизации 
 
 1. **Wallust/Pywal** — автоматическая генерация цветов из обоев для Waybar, Kitty, Wofi, Dunst, Hyprland borders
