@@ -22,11 +22,6 @@ set -gx VISUAL nvim
 set -gx TERMINAL kitty
 set -gx BROWSER firefox
 
-# Rbenv
-if type -q rbenv
-    status --is-interactive; and rbenv init - fish | source
-end
-
 # Starship prompt
 if type -q starship
     starship init fish | source
@@ -37,7 +32,3 @@ if type -q zoxide
     zoxide init fish | source
 end
 
-# FNM (Node.js version manager)
-if type -q fnm
-    fnm env --use-on-cd --shell fish | source
-end
