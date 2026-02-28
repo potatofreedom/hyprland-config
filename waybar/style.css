@@ -14,6 +14,7 @@
 @define-color wallust_orange #fab387;
 @define-color wallust_pink #f5c2e7;
 @define-color wallust_sapphire #74c7ec;
+@define-color wallust_icon #d4c08a;
 
 /* ===== Общие стили ===== */
 * {
@@ -31,11 +32,26 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
+    background: transparent;
+    padding: 0;
+    margin: 4px 0;
+}
+
+.modules-left,
+.modules-center {
     background: alpha(@wallust_bg, 0.82);
-    border-radius: 14px;
+    border-radius: 8px;
     border: 1px solid alpha(@wallust_accent2, 0.15);
     padding: 0 4px;
-    margin: 4px 0;
+}
+
+#tray-area,
+#status {
+    background: alpha(@wallust_bg, 0.82);
+    border-radius: 8px;
+    border: 1px solid alpha(@wallust_accent2, 0.15);
+    padding: 0 4px;
+    margin: 0 2px;
 }
 
 /* ===== Модули ===== */
@@ -43,19 +59,21 @@ window#waybar {
     padding: 0 10px;
     color: @wallust_overlay;
     background: transparent;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 4px 2px;
+    font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    color: @wallust_accent;
-    background: alpha(@wallust_accent, 0.18);
+    color: @wallust_icon;
+    background: alpha(@wallust_icon, 0.18);
 }
 
 #workspaces button:hover {
-    color: @wallust_pink;
-    background: alpha(@wallust_pink, 0.12);
+    color: @wallust_icon;
+    background: alpha(@wallust_icon, 0.12);
 }
 
 /* Правые модули */
@@ -70,18 +88,18 @@ window#waybar {
 #custom-power {
     padding: 0 12px;
     margin: 4px 2px;
-    border-radius: 10px;
+    border-radius: 6px;
     background: transparent;
     transition: all 0.3s ease;
 }
 
 #clock {
-    color: @wallust_pink;
+    color: @wallust_icon;
     font-weight: bold;
 }
 
 #battery {
-    color: @wallust_green;
+    color: @wallust_icon;
 }
 
 #battery.warning {
@@ -94,19 +112,19 @@ window#waybar {
 }
 
 #network {
-    color: @wallust_blue;
+    color: @wallust_icon;
 }
 
 #bluetooth {
-    color: @wallust_sapphire;
+    color: @wallust_icon;
 }
 
 #pulseaudio {
-    color: @wallust_orange;
+    color: @wallust_icon;
 }
 
 #backlight {
-    color: @wallust_yellow;
+    color: @wallust_icon;
 }
 
 #tray {
@@ -114,13 +132,19 @@ window#waybar {
 }
 
 #custom-power {
-    color: @wallust_red;
+    color: @wallust_icon;
     font-size: 15px;
     padding: 0 10px;
 }
 
 #custom-media {
-    color: @wallust_green;
+    color: @wallust_icon;
+}
+
+#language {
+    color: @wallust_icon;
+    font-weight: bold;
+    padding: 0 10px;
 }
 
 #window {
@@ -137,11 +161,14 @@ window#waybar {
 
 /* Tooltips */
 tooltip {
-    background: alpha(@wallust_bg, 0.95);
-    border: 1px solid alpha(@wallust_accent2, 0.3);
-    border-radius: 10px;
+    background: alpha(@wallust_bg, 0.92);
+    border: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 tooltip label {
     color: @wallust_fg;
+    padding: 10px 14px;
+    font-size: 13px;
 }

@@ -1,54 +1,70 @@
+/* ╔══════════════════════════════════════╗ */
+/* ║  Wofi — Catppuccin Mocha Minimal     ║ */
+/* ╚══════════════════════════════════════╝ */
+
 window {
-    margin: 0px;
-    border: 2px solid rgba(203, 166, 247, 0.4);
-    border-radius: 15px;
-    background-color: rgba(30, 30, 46, 0.92);
+    margin: 0;
+    border: none;
+    border-radius: 16px;
+    background-color: rgba(17, 17, 27, 0.85);
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
 }
 
+#outer-box {
+    margin: 0;
+    padding: 20px 16px 16px 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: transparent;
+}
+
 #input {
     all: unset;
-    margin: 10px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(49, 50, 68, 0.8);
+    margin: 4px 4px 14px 4px;
+    padding: 13px 18px;
+    border-radius: 12px;
+    background-color: rgba(30, 30, 46, 0.5);
     color: #cdd6f4;
-    font-size: 14px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(116, 199, 236, 0.1);
 }
 
 #input:focus {
-    border: 1px solid rgba(203, 166, 247, 0.5);
+    background-color: rgba(30, 30, 46, 0.65);
+    border-bottom: 1px solid rgba(116, 199, 236, 0.2);
 }
 
 #inner-box {
-    margin: 5px 10px;
+    margin: 0 4px;
     border: none;
 }
 
-#outer-box {
-    margin: 0px;
+#scroll {
+    margin: 0;
     border: none;
-    border-radius: 15px;
 }
 
 #text {
-    margin: 5px;
-    color: #cdd6f4;
+    margin: 0 8px;
+    color: rgba(205, 214, 244, 0.9);
 }
 
 #entry {
-    padding: 8px;
-    border-radius: 10px;
-    margin: 2px 0px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin: 2px 0;
 }
 
 #entry:selected {
-    background-color: rgba(203, 166, 247, 0.2);
-    border: 1px solid rgba(203, 166, 247, 0.3);
+    background-color: rgba(116, 199, 236, 0.08);
+}
+
+#entry:selected #text {
+    color: #74c7ec;
 }
 
 #img {
-    margin-right: 10px;
+    margin-right: 14px;
+    border-radius: 8px;
 }

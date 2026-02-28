@@ -15,6 +15,12 @@ alias ff='fastfetch'
 
 # PATH
 fish_add_path ~/.local/bin
+fish_add_path ~/.rbenv/bin
+
+# rbenv
+if type -q rbenv
+    status --is-interactive; and rbenv init - fish | source
+end
 
 # Переменные
 set -gx EDITOR nvim

@@ -167,9 +167,11 @@ echo -e "${YELLOW}[6/7] Installing scripts...${NC}"
 cp "$SCRIPT_DIR/scripts/set-wallpaper.sh" "$HOME/.local/bin/"
 cp "$SCRIPT_DIR/scripts/screenshot.sh" "$HOME/.local/bin/"
 cp "$SCRIPT_DIR/scripts/colorpicker.sh" "$HOME/.local/bin/"
+cp "$SCRIPT_DIR/scripts/wofi-launcher.sh" "$HOME/.local/bin/"
 chmod +x "$HOME/.local/bin/set-wallpaper.sh"
 chmod +x "$HOME/.local/bin/screenshot.sh"
 chmod +x "$HOME/.local/bin/colorpicker.sh"
+chmod +x "$HOME/.local/bin/wofi-launcher.sh"
 echo -e "  Scripts installed to ~/.local/bin/"
 
 # ===== Системные конфиги (требуют sudo) =====

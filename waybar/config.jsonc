@@ -15,32 +15,47 @@
         "clock"
     ],
     "modules-right": [
-        "tray",
-        "custom/media",
-        "pulseaudio",
-        "network",
-        "bluetooth",
-        "backlight",
-        "battery",
-        "custom/power"
+        "group/tray-area",
+        "group/status"
     ],
+
+    "group/tray-area": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray"
+        ]
+    },
+
+    "group/status": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/media",
+            "hyprland/language",
+            "pulseaudio",
+            "network",
+            "bluetooth",
+            "backlight",
+            "battery",
+            "custom/power"
+        ]
+    },
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "󰎤",
-            "2": "󰎧",
-            "3": "󰎪",
-            "4": "󰎭",
-            "5": "󰎱",
-            "6": "󰎳",
-            "7": "󰎶",
-            "8": "󰎹",
-            "9": "󰎼",
-            "10": "󰽽",
-            "urgent": "󰀨",
-            "active": "󰮯",
-            "default": "󰊠"
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "urgent": "!",
+            "active": "",
+            "default": "○"
         },
         "on-click": "activate",
         "sort-by-number": true,
@@ -57,21 +72,26 @@
     },
 
     "clock": {
-        "format": "󰥔  {:%H:%M}",
-        "format-alt": "󰃭  {:%A, %d %B %Y | %H:%M:%S}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %d %B %Y  ·  %H:%M:%S}",
+        "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
-            "mode": "year",
+            "mode": "month",
             "mode-mon-col": 3,
             "weeks-pos": "right",
             "on-scroll": 1,
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'>{}</span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+                "months": "<span color='#74c7ec'><b>{}</b></span>",
+                "days": "<span color='#bac2de'>{}</span>",
+                "weeks": "<span color='#45475a'>W{}</span>",
+                "weekdays": "<span color='#89b4fa'><b>{}</b></span>",
+                "today": "<span color='#f5c2e7'><b><u>{}</u></b></span>"
             }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
         },
         "interval": 1
     },
@@ -83,8 +103,8 @@
         },
         "format": "{icon}  {capacity}%",
         "format-charging": "󰂄  {capacity}%",
-        "format-plugged": "󰚥  {capacity}%",
-        "format-icons": ["󰁺", "󰁻", "󰁾", "󰂀", "󰁹"],
+        "format-plugged": "󰂎  {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁾", "󰂀", "󰁹"],
         "tooltip-format": "{timeTo}\n{power}W"
     },
 
@@ -137,10 +157,15 @@
         "max-length": 25,
         "format-icons": {
             "spotify": "󰓇",
-            "default": "󰎈"
+            "default": "󰽩"
         },
         "escape": true,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F 2>/dev/null"
+    },
+
+    "hyprland/language": {
+        "format": "{short}",
+        "tooltip-format": "{long}"
     },
 
     "custom/power": {
